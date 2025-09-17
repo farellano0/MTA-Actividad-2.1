@@ -1,0 +1,353 @@
+/* Reset básico y configuración de fuentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base para rem units */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Container principal */
+body > * {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Encabezado principal */
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 2rem 0;
+    padding: 2rem 0;
+    letter-spacing: -0.02em;
+}
+
+/* Navegación */
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    margin: 0 auto 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 1rem;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+nav a:active {
+    transform: translateY(0);
+}
+
+/* Secciones */
+section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    margin: 2rem auto;
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos de sección */
+h2 {
+    color: #2d3748;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #667eea;
+    position: relative;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #764ba2;
+    border-radius: 2px;
+}
+
+/* Párrafos */
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #4a5568;
+}
+
+/* Imagen de perfil */
+#SobreMi img {
+    float: left;
+    margin: 0 2rem 1rem 0;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 200px;
+    height: auto;
+}
+
+#SobreMi img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabla del portafolio */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+td {
+    padding: 1.25rem;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+
+tr:hover td {
+    background-color: #f7fafc;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Enlaces */
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+a:hover,
+a:focus {
+    color: #764ba2;
+    text-decoration: underline;
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+a:visited {
+    color: #553c9a;
+}
+
+/* Enlaces de la tabla */
+table a {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+table a:hover,
+table a:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Footer */
+footer {
+    background: rgba(45, 55, 72, 0.95);
+    color: #cbd5e0;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 20px 20px 0 0;
+    backdrop-filter: blur(10px);
+}
+
+footer p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body > * {
+        padding: 0 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    nav a {
+        text-align: center;
+    }
+    
+    section {
+        margin: 1.5rem auto;
+        padding: 2rem 1.5rem;
+    }
+    
+    #SobreMi img {
+        float: none;
+        display: block;
+        margin: 0 auto 1.5rem auto;
+        max-width: 150px;
+    }
+    
+    p {
+        text-align: left;
+    }
+    
+    table, th, td {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 1rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        border-radius: 15px;
+    }
+    
+    section {
+        border-radius: 15px;
+        padding: 1.5rem 1rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visible mejorado */
+*:focus-visible {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+/* Alto contraste para mejor legibilidad */
+@media (prefers-contrast: high) {
+    body {
+        background: #ffffff;
+        color: #000000;
+    }
+    
+    section {
+        background: #ffffff;
+        border: 2px solid #000000;
+    }
+    
+    h1, h2 {
+        color: #000000;
+    }
+    
+    nav {
+        background: #ffffff;
+        border: 2px solid #000000;
+    }
+    
+    nav a {
+        color: #000000;
+    }
+    
+    nav a:hover, nav a:focus {
+        background: #000000;
+        color: #ffffff;
+    }
+}
